@@ -55,8 +55,8 @@ export default function Home() {
         <h1>Food Delivery App</h1>
         <div className="input-wrappered">
           <input type="text" value={selectedLocation} 
-          onChange={() => setShowLocation(true)}
-            className="select-input" placeholder="Select Place " />
+             onChange={() => setShowLocation(true)}
+             className="select-input" placeholder="Select Place " />
           <ul className="location-list">
             {
               showLocation && locations.map((item,key) => <li key={key} onClick={() => handleListItem(item)}>{item}</li>)
