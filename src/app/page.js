@@ -54,11 +54,12 @@ export default function Home() {
       <div className="main-page-banner">
         <h1>Food Delivery App</h1>
         <div className="input-wrappered">
-          <input type="text" value={selectedLocation} onFocus={() => setShowLocation(true)}
+          <input type="text" value={selectedLocation} 
+          onChange={() => setShowLocation(true)}
             className="select-input" placeholder="Select Place " />
           <ul className="location-list">
             {
-              showLocation && locations.map(item => <li onClick={() => handleListItem(item)}>{item}</li>)
+              showLocation && locations.map((item,key) => <li key={key} onClick={() => handleListItem(item)}>{item}</li>)
             }
           </ul>
           <input type="text" className="search-input"
